@@ -1,0 +1,13 @@
+# I wrote the original solution to this problem in Java but I didn't save the code. This python code follows the same logic but only solves 4/5 cases due to a time constraint
+def solution(l):
+    dbls = []
+    count = 0
+    for k in range(len(l)-1):
+        dbls.append([])
+        for h in range(k+1,len(l)):
+            if l[h] % l[k] == 0:
+                #dbls[k].append(l[h])
+                for t in range(h+1,len(l)):
+                    if l[t]%l[h] == 0:
+                        count +=1
+    return count
